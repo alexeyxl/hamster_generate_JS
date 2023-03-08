@@ -19,7 +19,8 @@ const mnemonic = ent.generateMnemonic()<br/>
 const isValid = isValidMnemonic('surround tape away million into program organ tonight write prefer inform cool');<br/>
 <br/>
 Main functions:<br/>
-#ent.entropy<br/><br/><br/>
+#ent.entropy<br/><br/>
+ent.entropy.new().....
 ##.new(strength, rng)<br/>
   strength = 128 (is def) || 160 || 192 || 224 || 256<br/>
   rng - it's a fixed entropy<br/>
@@ -42,7 +43,7 @@ Main functions:<br/>
 ##.toAddress(ent,pref, pswd, wordlist)<br/>
    if used pref (for example 'Mx') return MxA1d3........ else return 0xA1d3........<br/>
    <br/><br/>
-#ent.mnemonic<br/><br/><br/>
+#ent.mnemonic<br/><br/>
 ##.new(strength, rng, wordlist)<br/>
 ##.isValide(mnemonic, wordlist)<br/>
   result true / false <br/>
@@ -53,14 +54,14 @@ Main functions:<br/>
 ##.toPubKey(mnemonic,pref,pswd,path)<br/>
 ##.toAddress(mn,pref, pswd,path)<br/>
 <br/><br/>
-#ent.seed<br/><br/><br/>
+#ent.seed<br/><br/>
 ##.isValide(seed)<br/>
 ##.toHdkey(seed, path)<br/>
 ##.toPrivKey(seed,pref, path)<br/>
 ##.toPubKey(seed,pref, path)<br/>
 ##.toAddress(seed, pref , path)<br/>
 
-#ent.privKey<br/><br/><br/>
+#ent.privKey<br/><br/>
 ##.new(strength, pref , pswd, rng, wordlist, path)<br/>
 ##.format(privKey,pref)<br/>
   return formated private key in array [private key without prefix, prefix]<br/>
@@ -68,18 +69,18 @@ Main functions:<br/>
 ##.toPubKey(privKey,pref)<br/>
 ##.toAddress(privKey, pref)<br/>
 
-#ent.pubKey <br/><br/><br/>
+#ent.pubKey <br/><br/>
 ##.isValide(pubKey)<br/>
 ##.format(pubKey,pref)<br/>
  return formated publick key in array [publick key without prefix, prefix]<br/>
 ##.toAddress(pubKey, pref)<br/>
 
-#ent.wallet <br/><br/><br/>
+#ent.wallet <br/><br/>
 ##.new(strength, rng, wordlist, path)<br/>
 ##.fromMnemonic(mnemonic,path)<br/>
 ##.fromPrivate(privKey,path)<br/>
 
-#ent.address <br/><br/><br/>
+#ent.address <br/><br/>
 ##.isValide(address,pref,len)<br/>
   len is default = 40<br/>
   pref if need check by prefix for example 'Mx'<br/>
